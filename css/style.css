@@ -1,0 +1,837 @@
+/* CSS Variables */
+:root {
+    --white1: #FFF;
+    --white2: #FAFAFA;
+    --gold1: #F4BD76;
+    --gold2: #F6CD8F;
+    --gray1: #FFFFFF80;
+    --gray2: #F7D9D990;
+    --black1: #1A1B1F;
+    --black2: #30353B;
+    --shadow: 0px 8px 8px;
+    --color-shadow: #00000033;
+}
+
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0px auto;
+    overflow: hidden;
+    padding: 100px 0px;
+    height: auto;
+}
+
+/* Header */
+.header-hero {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);
+}
+
+.nav-hero {
+    color: var(--white1);
+    height: 70px;
+    border-bottom: 1px solid rgba(255,255,255, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    height: inherit;
+    padding: 0px;
+}
+
+.link {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    font-weight: 300;
+    padding: 10px;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.link-active,
+.logo-active,
+.title-active,
+.copy-active {
+    color: var(--gold1);
+    font-weight: 700;
+}
+
+.hero-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    height: calc(100vh - 70px);
+    padding: 0px;
+}
+
+.mockup {
+    width: 48%;
+    object-fit: cover;
+    max-height: 90vh;
+}
+
+.hero-texts {
+    width: 48%;
+}
+
+.title {
+    font-size: 56px;
+    font-weight: 300;
+    color: var(--white1);
+}
+
+.copy {
+    font-size: 24px;
+    color: var(--white1);
+    text-shadow: var(--shadow) var(--color-shadow);
+    margin: 15px 0px;
+}
+
+.cta {
+    padding: 20px 30px;
+    display: inline-block;
+    background: linear-gradient(180deg, #F7CE90 0%, #F4BD76 100%);
+    text-decoration: none;
+    color: var(--black2);
+    font-weight: 700;
+    box-shadow: var(--shadow) var(--color-shadow);
+    border-radius: 6px;
+}
+
+.cta:hover {
+    opacity: 0.8;
+}
+
+/* Services */
+.services {
+    background-color: var(--white2);
+}
+
+.subtitle {
+    font-size: 42px;
+}
+
+.copy-section {
+    color: var(--black2);
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 60px;
+}
+
+/* Container - Services, Projects, Testimony  */
+.container-cards,
+.container-bg,
+.testimony-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card {
+    width: 30%;
+    padding: 30px 0px;
+    overflow: hidden;
+    background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);
+    border-radius: 10px;
+    position: relative;
+    text-align: right;
+    margin-bottom: 60px;
+    box-shadow: 0px 0px 6px var(--color-shadow);
+}
+
+.card-img {
+    width: 95%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.cards-text {
+    text-align: left;
+    width: 90%;
+    margin: 0px auto;
+}
+
+.card-list {
+    color: var(--gold2);
+    font-weight: 700;
+    margin: 25px 0px 12px ;
+    font-size: 18px;
+}
+
+.card-title {
+    font-size: 40px;
+    color: var(--white1);
+    margin-bottom: 8px;
+}
+
+.card-copy {
+    color: var(--white1);
+    margin-bottom: 16px;
+}
+
+.card-button {
+    display: block;
+    background: linear-gradient(180deg, #F7CE90 0%, #F4BD76 100%);
+    border-radius: 6px;
+    text-decoration: none;
+    width: 100%;
+    color: var(--black1);
+    font-weight: 700;
+    text-align: center;
+    padding: 12px 0px;
+}
+
+.card-button:hover {
+    opacity: 0.8;
+}
+
+/* Projects */
+.card-date {
+    color: var(--gold2);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.background {
+    width: 68%;
+    height: 290px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.background-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.background-text {
+    position: absolute;
+    width: 100%;
+    bottom: 30px;
+    left: 15px;
+    color: var(--white1);
+}
+
+.background-title {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+/* Testimony */
+.testimony {
+    background-color: var(--white2);
+}
+
+.testimony-card {
+    width: 30%;
+    height: 500px;
+    background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.testimony-img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-fit: cover;
+}
+
+.testimony-copy {
+    display: flex;
+    align-items: center;
+    
+    position: absolute;
+    bottom: 20px;
+    left: 5%;
+    width: 90%;
+    background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);
+    color: var(--white1);
+    margin: 0px auto;
+    border-radius: 10px;
+    box-shadow: var(--shadow) var(--color-shadow);
+    padding: 15px 8px;    
+}
+
+.testimony-logo {
+    font-size: 40px;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.testimony-info {
+    width: 70%;
+}
+
+.testimony-name {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.testimony-position {
+    color: var(--gold1);
+}
+
+.testimony-text {
+    padding: 40px 0px;
+    width: 90%;
+    margin: 0px auto;
+    color: var(--white1);
+}
+
+.google-logo {
+    margin-bottom: 20px;
+}
+
+.testimony-history {
+    font-size: 21px;
+    font-weight: 300;
+}
+
+.testimony-copy-modifier {
+    background: none;
+    box-shadow: none;
+}
+
+.logo-picture{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    object-position: center top;
+}
+
+/* E-mail */
+.container-modifier {
+    width: 60%;
+}
+
+.subtitle-modifier {
+    text-align: center;
+    margin-bottom: 16px;
+} 
+
+.copy-section-modifier {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.check {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    margin: 0px auto;
+}
+
+.check-item {
+    display: flex;
+
+    width: 30%;
+    padding-right: 10px;
+    border-right: 2px solid var(--black2);
+}
+
+.check-item:last-child {
+    border-right: none;
+}
+
+.bx-check {
+    background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    color: var(--white1);
+    border-radius: 50%;
+    font-size: 40px;
+}
+
+.check-number {
+    font-weight: 700;
+}
+
+.check-copy {
+    font-weight: 300;
+}
+
+.newsletter {
+    width: 60%;
+    margin: 40px auto 0px;
+    height: auto;
+    position: relative;
+}
+
+.newsletter-input {
+    width: 100%;
+    height: 100%;
+    padding: 22px 10px;
+    outline: none;
+    font-family: inherit;
+    border-radius: 6px;
+    border: 1px solid var(--black1)
+}
+
+.newsletter-submit {
+    position: absolute;
+    right: 8px;
+    top: 10%;
+    height: 80%;
+    background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);
+    color: var(--white1);
+    padding: 0px 15px;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.newsletter-submit:hover {
+    opacity: 0.9;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--white2);
+}
+
+.footer-caption {
+    display: flex;
+    flex-wrap: wrap-reverse; 
+    justify-content: space-evenly;
+}
+
+.download {
+    width: 50%;
+}
+
+.title-footer {
+    font-size: 24px;
+    margin-bottom: 32px;
+}
+
+.download-app {
+    display: flex;
+}
+
+.download-item {
+    display: flex;
+
+    padding: 18px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--black2);
+    width: 42%;
+    align-items: center;
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
+.download-item:hover {
+    cursor: pointer;
+    color: var(--white1);
+    background-color: var(--black1);
+}
+
+.download-logo {
+    font-size: 40px;
+    margin-right: 20px;
+}
+
+.download-title {
+    font-size: 18px;
+}
+
+.footer-copy {
+    display: flex;
+    flex-wrap: wrap;
+    
+    width: 100%;
+    color: var(--black2);
+}
+
+.copyright {
+    width: 100%;
+}
+
+.privacy-politic {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.privacy-politic:hover {
+    text-decoration: underline;
+}
+
+.privacy-politic-margin {
+    margin-right: 10px;
+}
+
+.get-email {
+    width: 50%;
+}
+
+.newsletter-modifier {
+    margin: 0px;
+    width: 80%;
+}
+
+.socialmedia {
+    display: flex;
+
+    margin-top: 24px;
+    color: var(--black2);
+}
+
+.socialmedia > i:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.socialmedia-legend {
+    color: var(--black2);
+    margin-right: 16px;
+}
+
+.socialmedia-icon {
+    font-size: 20px;
+    margin-right: 30px;
+    display: inline-block;
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+    color: var(--white1);
+}
+
+.item-contact {
+    width: 25%;
+    padding: 60px 0px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--black2) 0%, var(--black1) 100%);
+}
+
+.item-contact-gold {
+    background: linear-gradient(180deg, #F7CE90 0%, #F4BD76 100%);
+    color: var(--black1);
+}
+
+.contact-icon {
+    font-size: 14px;
+    color: var(--gold1);
+    line-height: 20px; 
+    margin-right: 4px;
+}
+
+.contact-icon-modifier {
+    color: var(--black1);
+}
+
+.contact-title {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.contact-us:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/* Media Query 900px */
+@media (max-width: 900px) {
+    /* Header */
+    .title {
+        font-size: 50px;
+    }
+    
+    .copy {
+        font-size: 22px;
+    }
+
+    .cta {
+        padding: 15px 22px;
+    }
+
+    .mockup {
+        width: 600px;
+        height: auto;
+    }
+
+    /* Services */
+    .container-cards,
+    .testimony-container {
+        justify-content: space-evenly;
+    }
+
+    .services .card,
+    .testimony-card {
+        width: 45%;
+    }
+
+    /* Projects */
+    .card {
+        width: 42%;
+    }
+
+    .background {
+        width: 52%;
+    }
+
+    /* E-mail */
+    .check-item {
+        width: 45%;
+        margin-bottom: 35px;
+    }
+
+    .check-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .newsletter {
+        width: 80%;
+    }
+
+    /* Footer */
+    .download {
+        width: 100%;
+    }
+
+    .download-app {
+        justify-content: space-between;
+    }
+
+    .download-item {
+        width: 45%;
+    }
+
+    .get-email {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .socialmedia-legend {
+        font-size: 18px;
+    }
+  
+    .socialmedia-icon {
+        font-size: 18px;
+    }
+}
+
+/* Media Query 700px */
+@media (max-width: 700px) {
+    /* Container - Main and Footer */
+    main .container,
+    .footer .container {
+        padding: 60px 0px;
+    }
+
+    /* Header */
+    .nav-hero {
+        height: auto;
+    }
+
+    .nav-container {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .logo {
+        padding: 15px 0px;
+        text-align: center;
+    }
+
+    .links {
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    .link {
+        padding: 7px 10px;
+    }
+
+    .hero-main {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        min-height: 70px;
+        height: auto;
+        padding: 30px 0px;
+    }
+
+    .title {
+        font-size: 35px;
+    }
+
+    .hero-texts { 
+        width: 100%;
+        text-align: center;
+    }
+
+    .mockup {
+        width: 60%;
+        margin-bottom: 20px;
+    }
+
+    .copy {
+        font-size: 20px;
+    }
+
+    /* Services */
+    .subtitle {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .copy-section {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .services .card {
+        width: 80%;
+    }
+
+    /* Projects */
+    .container-bg {
+        justify-content: space-evenly;
+    }
+
+    .card,
+    .background {
+        width: 65%;
+        margin-bottom: 40px;
+    }
+
+    .card-title {
+        font-size: 35px;
+    }
+
+    .background-copy {
+        display: none;
+    }
+
+    /* Testimony */
+    .testimony-card {
+        width: 65%;
+    }
+
+    .testimony-name {
+        font-size: 20px;
+    }
+
+    /* E-mail */
+    .container-modifier {
+        width: 80%;
+    }
+
+    /* Footer */
+    .item-contact {
+        width: 100%;
+        padding: 30px 0px;
+    }
+}
+
+/* Media Query 500px */
+@media (max-width:500px) {
+    /* Header */
+    .mockup{
+        width: 80%;
+        margin-bottom: 15px;
+    }
+
+    /* Services */
+    .services .card,
+    .card, 
+    .background,
+    .testimony-card {
+        width: 95%;
+    }
+
+    /* Testimony */
+    .testimony-history {
+        font-size: 20px;
+    }
+    
+    /* E-mail */
+    .container-modifier {
+        width: 90%;
+    }
+
+    .check-item {
+        width: 100%;
+        border: none;
+        justify-content: center;
+    }
+
+    .newsletter {
+        width: 100%;
+    }
+
+    /* Footer */
+    .download-app {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        margin-bottom: 15px;
+    }
+
+    .download-item {
+        justify-content: center;
+        width: 50%;
+    }
+
+    .title-footer {
+        text-align: center;
+    }
+
+    .download-logo {
+        font-size: 30px;
+    }
+    
+    .download-title {
+        font-size: 16px;
+    }
+
+    .footer-copy {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+}
